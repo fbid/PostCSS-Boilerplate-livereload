@@ -2,7 +2,7 @@
   "name": "postcss-lostgrid-boilerplate",
   "version": "0.0.1",
   "description": "A simple PostCSS and LostGrid basic setup",
-  "main": "src/js/main.js",
+  "main": "src/js/scripts.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
