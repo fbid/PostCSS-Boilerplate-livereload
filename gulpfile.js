@@ -67,7 +67,14 @@ gulp.task('styles', function() {
 
 //Browser Sync
 gulp.task('browser-sync', function() {
-    browserSync.init(["src/css/*.css", "src/js/*.js"], {
+
+    var files = [
+      '*.html',
+      paths.src.styles,
+      paths.src.js
+    ];
+
+    browserSync.init(files, {
         server: {
             baseDir: "./"
         }
