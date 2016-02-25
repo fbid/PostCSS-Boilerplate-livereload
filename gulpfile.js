@@ -4,6 +4,7 @@ var gulp          = require('gulp'),
     cssnano       = require('cssnano'),
     simplevars    = require('postcss-simple-vars'),
     nested        = require('postcss-nested'),
+    atImport      = require('postcss-import'),
     uglify        = require('gulp-uglify'),
     plumber       = require('gulp-plumber'),
     autoprefixer  = require('autoprefixer'),
@@ -20,7 +21,7 @@ var gulp          = require('gulp'),
 var paths = {
   src: {
     js: './src/js/**/*.js',
-    styles: './src/styles/main.css',
+    styles: './src/styles/**/*.css',
     imgs: ''
   },
 
@@ -31,6 +32,7 @@ var paths = {
 }
 
 var processors = [
+  atImport,
   lost,
   simplevars,
   nested,
